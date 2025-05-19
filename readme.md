@@ -17,7 +17,7 @@ Prerequisites
 
 Usage
 ------
-cd GDiffMAE
-* python Main.py --data ml-1m
+cd GDiffMAE \
+python Main.py --data {ml-1m, yelp, douban}
 
 
