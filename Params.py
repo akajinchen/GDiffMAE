@@ -15,7 +15,7 @@ def ParseArgs():
     parser.add_argument('--epoch', default=100, type=int, help='number of epochs')
     parser.add_argument('--decay', default=0, type=float, help='weight decay rate')
     parser.add_argument('--latdim', default=300, type=int, help='embedding size')
-    parser.add_argument('--mask_r', default=1, type=float, help='mask ratio') #1
+    parser.add_argument('--mask_r', default=1, type=float, help='mask ratio')
     parser.add_argument('--lp', default=0, type=float, help='mask ratio low bound')
     parser.add_argument('--gcn_layer0', default=2, type=int, help='number of gcn layers')
 

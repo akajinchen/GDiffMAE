@@ -23,7 +23,7 @@ os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
 os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
 os.environ['TORCH_USE_CUDA_DSA'] = '1'
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-# device = "cpu"
+
 
 
 class Coach:
@@ -220,18 +220,6 @@ class Coach:
             allNdcg += ndcg
         return allRecall, allNdcg
 
-    # def saveHistory(self):
-    #     if args.epoch == 0:
-    #         return
-    #     with open('./History/' + args.save_path + '.txt', 'wb') as fs:
-    #         pickle.dump(self.metrics, fs)
-
-    #     content = {
-    #         'model': self.model,
-    #     }
-    #     torch.save(content, './Models/' + args.save_path + '.mod')
-    #     torch.save(self.model.state_dict(), './Models/' + args.save_path + '.pt')
-    #     log('Model Saved: %s' % args.save_path)
 
     def loadModel(self):
         ckp = torch.load('./Models/' + args.load_model + '.mod')
